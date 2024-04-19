@@ -1,0 +1,13 @@
+for docker and microservice : https://www.youtube.com/watch?v=e3YERpG2rMs
+for microservice creation :
+
+docker:
+
+build image: docker build -t employeepoc .(this . will be for docker file if we are running from same place where docker file is then only . will work or else complete path after .)
+run docker image: docker run -p 8080:9090 employeepoc:latest (8080 would be the port from docker file)---> then check from system ip : 9090
+docker hub credential : nikumari, Gudiya@2024
+
+push image to docker hub: docker tag employeepoc:latest nikumari/employeepoc:latest (nikumari is username in docker hub)
+                          docker image push nikumari/employeepoc:latest
+    use same name in deployment file
+

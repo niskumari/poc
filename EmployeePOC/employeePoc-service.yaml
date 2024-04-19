@@ -1,0 +1,13 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: employee-poc-service
+spec:
+  selector:
+      app: employeepoc
+      version: v01
+  ports:
+     - protocol : TCP
+       port : 80
+       targetPort : 8080
