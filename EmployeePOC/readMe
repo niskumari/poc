@@ -5,9 +5,23 @@ docker:
 
 build image: docker build -t employeepoc .(this . will be for docker file if we are running from same place where docker file is then only . will work or else complete path after .)
 run docker image: docker run -p 8080:9090 employeepoc:latest (8080 would be the port from docker file)---> then check from system ip : 9090
-docker hub credential : nikumari, Gudiya@2024
+
 
 push image to docker hub: docker tag employeepoc:latest nikumari/employeepoc:latest (nikumari is username in docker hub)
                           docker image push nikumari/employeepoc:latest
     use same name in deployment file
+kubenet commands:
+kubectl apply -f <<deploymentFile>>
+kubectl apply -f <<service.yaml>>
+
+After changing type to LoadBalancer to clusterIP in service...need to run "minikube service <<service-name>> " to assign external ip to services and run from post man
+
+BODY:
+{
+    "PersonID": "123",
+    "firstName" : "Nisha",
+    "lastName" : "Kumari"
+}
+
+For helm : https://jhooq.com/building-first-helm-chart-with-spring-boot/
 
